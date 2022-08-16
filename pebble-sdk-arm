@@ -1,0 +1,62 @@
+#################################################
+# Pebble SDK install on Linux on Android 
+# (Works with debian distro on LinuxDeploy
+#   -Seth 16/8/2022
+# -----------------------------------------------
+# PREPARE SYSTEM FIRST!
+# -----------------------------------------------
+# 1. Install Linux Deploy on your Android device
+# 2. Install debian linux on Linux Deploy
+# 3. Boot linux install and do the following:
+#   Install gcc-arm-none-eabi for this OS:
+#       sudo apt update
+#       sudo apt install gcc-arm-none-eabi
+#
+# -----------------------------------------------
+# Install Pebble SDK
+# Follow usual steps to install SDK on linux 
+# -----------------------------------------------
+
+# -----------------------------------------------
+# Now we make a few changes
+# -----------------------------------------------
+# Set the path to your pebble sdk here
+SDKDIR=/home/<username>/pebble-dev/pebble-sdk-4.5-linux64
+# -----------------------------------------------
+# Now you can run this script from a terminal
+# -----------------------------------------------
+#################################################
+
+# Find compiler version
+COMPILERVER=`arm-none-eabi-gcc --version | grep gcc | awk '{print $3}'`
+
+#-------------------------------------------------------------------------
+# Backup stuff in arm-cs-tools, create new dirs and links
+#-------------------------------------------------------------------------
+mv $SDKDIR/arm-cs-tools/arm-none-eabi $SDKDIR/arm-cs-tools/arm-none-eabi.OLD
+mkdir -p $SDKDIR/arm-cs-tools/arm-none-eabi/lib
+mkdir $SDKDIR/arm-cs-tools/arm-none-eabi/share
+mkdir $SDKDIR/arm-cs-tools/arm-none-eabi/usr
+ln -s /usr/bin $SDKDIR/arm-cs-tools/arm-none-eabi/bin
+ln -s /usr/include $SDKDIR/arm-cs-tools/arm-none-eabi/include
+
+mv $SDKDIR/arm-cs-tools/bin $SDKDIR/arm-cs-tools/bin.OLD
+ln -s /usr/bin $SDKDIR/arm-cs-tools/bin
+
+mv $SDKDIR/arm-cs-tools/lib $SDKDIR/arm-cs-tools/lib.OLD
+mv $SDKDIR/arm-cs-tools/libexec $SDKDIR/arm-cs-tools/libexec.OLD
+mkdir -p $SDKDIR/arm-cs-tools/lib/gcc/arm-none-eabi
+ln -s /usr/lib/gcc/arm-none-eabi/$COMPILERVER $SDKDIR/arm-cs-tools/lib/gcc/arm-none-eabi/4.7.2
+
+mkdir -p $SDKDIR/arm-cs-tools/libexec/gcc/arm-none-eabi
+ln -s /usr/lib/gcc/arm-none-eabi/$COMPILERVER $SDKDIR/arm-cs-tools/libexec/gcc/arm-none-eabi/4.7.2
+
+
+#########################################################
+# echo 'Done!'
+# echo 'If no errors, you can remove dirs with .OLD suffix'
+#########################################################
+
+
+
+
