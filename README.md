@@ -10,5 +10,5 @@ Easiest method:
 - Install Pebble SDK
 - Run this script (make sure to alter the path to your Pebble SDK
 
-  (e.g. /home/<user>/pebble-dev/pebble-sdk-4.5-linux64 )
+  (e.g. /home/username/pebble-dev/pebble-sdk-4.5-linux64 )
   
