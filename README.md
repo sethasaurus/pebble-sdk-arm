@@ -12,3 +12,6 @@ Easiest method:
 
   (e.g. /home/username/pebble-dev/pebble-sdk-4.5-linux64 )
   
+NOTE: qemu-pebble does not work so you need to install to phone in order to test:
+
+pebble install --logs --phone=IPADDRESS
