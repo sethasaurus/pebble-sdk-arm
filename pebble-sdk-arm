@@ -9,10 +9,7 @@
 # 2. Install debian linux
 # 3. Run https://github.com/sethasaurus/pebble-sdk-dependencies
 # 4. Run https://github.com/sethasaurus/pebble-sdk-install
-# 5. Boot linux install and do the following:
-#   Install gcc-arm-none-eabi for this OS:
-#       sudo apt update
-#       sudo apt install gcc-arm-none-eabi
+# 5. Edit the userdir below, then run this script
 #--------------------------------------------------------------------------------------------------------
 
 #--------------------------------------------------------------------------------------------------------
