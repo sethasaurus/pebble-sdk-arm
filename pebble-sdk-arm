@@ -1,11 +1,11 @@
 #--------------------------------------------------------------------------------------------------------
 # Pebble SDK mod for Linux on Android 
-# Tested with debian distro on LinuxDeploy or UserSpace
+# Tested with debian distro on LinuxDeploy or UserLand
 #   -Seth 16/8/2022
 #--------------------------------------------------------------------------------------------------------
 # PREPARE SYSTEM FIRST!
 #--------------------------------------------------------------------------------------------------------
-# 1. Install Linux Deploy or UserSpace on your Android device
+# 1. Install Linux Deploy or UserLand on your Android device
 # 2. Install debian linux
 # 3. Run https://github.com/sethasaurus/pebble-sdk-dependencies
 # 4. Run https://github.com/sethasaurus/pebble-sdk-install
@@ -59,8 +59,8 @@ mkdir -p $SDKDIR/arm-cs-tools/libexec/gcc/arm-none-eabi
 ln -s /usr/lib/gcc/arm-none-eabi/$COMPILERVER $SDKDIR/arm-cs-tools/libexec/gcc/arm-none-eabi/4.7.2
 
 #--------------------------------------------------------------------------------------------------------
-# echo 'Arm install done!'
-# echo 'If no errors, you can remove any dirs with .OLD suffix'
+echo 'Arm install done!'
+echo 'If no errors, you can remove any dirs with .OLD suffix'
 #--------------------------------------------------------------------------------------------------------
 
 fi
