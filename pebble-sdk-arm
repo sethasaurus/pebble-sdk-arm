@@ -23,8 +23,8 @@ then
 echo 'Error - Please edit this file and set path to your SDK install'
 else
 #--------------------------------------------------------------------------------------------------------
-# Set the path - replace 'userspace' with name of home dir
-SDKDIR=/home/userspace/pebble-dev/pebble-sdk-4.5-linux64
+# Set the path - replace '$userdir' with name of home dir
+SDKDIR=/home/$userdir/pebble-dev/pebble-sdk-4.5-linux64
 #--------------------------------------------------------------------------------------------------------
 
 #--------------------------------------------------------------------------------------------------------
