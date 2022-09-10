@@ -1,32 +1,27 @@
-#--------------------------------------------------------------------------------------------------------
-# Pebble SDK mod for Linux on Android 
-# Tested with debian distro on LinuxDeploy or UserLand
-#   -Seth 16/8/2022
-#--------------------------------------------------------------------------------------------------------
-# PREPARE SYSTEM FIRST!
-#--------------------------------------------------------------------------------------------------------
-# 1. Install Linux Deploy or UserLand on your Android device
-# 2. Install debian linux
-# 3. Run https://github.com/sethasaurus/pebble-sdk-dependencies
-# 4. Run https://github.com/sethasaurus/pebble-sdk-install
-# 5. Edit the userdir below, then run this script
-#--------------------------------------------------------------------------------------------------------
-
-#--------------------------------------------------------------------------------------------------------
-# EDIT THIS!
-userdir='username'
-if [ $userdir == 'username' ]
+#!/bin/bash
+echo '#----------------------------------------------------------------'
+echo '# Pebble SDK mod for Linux on Android'
+echo '# Tested with debian distro on LinuxDeploy or UserLand'
+echo '#   -Seth 16/8/2022'
+echo '#----------------------------------------------------------------'
+echo '# MAKE SURE TO PREPARE SYSTEM FIRST!'
+echo '#----------------------------------------------------------------'
+echo '# 1. Install Linux Deploy or UserLand on your Android device'
+echo '# 2. Install debian linux'
+echo '# 3. Run https://github.com/sethasaurus/pebble-sdk-dependencies'
+echo '# 4. Run https://github.com/sethasaurus/pebble-sdk-install'
+echo '# 5. Edit userdir (below), then run this script'
+echo '#----------------------------------------------------------------'
+#------------
+# EDIT THIS:
+userdir=''
+#------------
+if [ $userdir == '' ]
 then
 echo 'Error - Please edit this file and set path to your SDK install'
 else
 #--------------------------------------------------------------------------------------------------------
-# Set the path - replace '$userdir' with name of home dir
 SDKDIR=/home/$userdir/pebble-dev/pebble-sdk-4.5-linux64
-#--------------------------------------------------------------------------------------------------------
-
-#--------------------------------------------------------------------------------------------------------
-# Now you can run this script from a terminal
-#--------------------------------------------------------------------------------------------------------
 
 #--------------------------------------------------------------------------------------------------------
 echo 'Finding compiler'
@@ -55,10 +50,10 @@ ln -s /usr/lib/gcc/arm-none-eabi/$COMPILERVER $SDKDIR/arm-cs-tools/lib/gcc/arm-n
 mkdir -p $SDKDIR/arm-cs-tools/libexec/gcc/arm-none-eabi
 ln -s /usr/lib/gcc/arm-none-eabi/$COMPILERVER $SDKDIR/arm-cs-tools/libexec/gcc/arm-none-eabi/4.7.2
 
-#--------------------------------------------------------------------------------------------------------
-echo 'Arm install done!'
-echo 'If no errors, you can remove any dirs with .OLD suffix'
-#--------------------------------------------------------------------------------------------------------
+echo '#----------------------------------------------------------------'
+echo '# Arm install done!'
+echo '# If no errors, you can remove any dirs with .OLD suffix'
+echo '#----------------------------------------------------------------'
 
 fi
 
