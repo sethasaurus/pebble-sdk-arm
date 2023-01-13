@@ -1,5 +1,5 @@
 # pebble-sdk-arm
-Script to install Pebble SDK on Linux on Android
+Script to install Pebble SDK on Linux on Android / ARM
 
 Tested on LinuxDeploy and UserLand.
 
