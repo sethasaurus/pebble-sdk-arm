@@ -18,6 +18,6 @@ Easiest method:
   
 NOTE: If installing in Userland or LinuxDeploy, qemu-pebble will not work.
 
- - you need to install watchfaces/apps via developer mode on Pebble app in order to test:
+You need to install watchfaces/apps via developer mode on Pebble app in order to test:
 
 pebble install --logs --phone=IPADDRESS
