@@ -1,13 +1,13 @@
 # pebble-sdk-arm
 Script to install Pebble SDK on Linux on Android
 
-Tested on LinuxDeploy and UserSpace.
-Make sure you have enough space on your LInux Deploy image!
+Tested on LinuxDeploy and UserLand.
 
 Easiest method:
-- Install debian distro on Linux Deploy or UserSpace:
+- Install debian distro on Linux Deploy or UserLand:
 
   https://play.google.com/store/apps/details?id=ru.meefik.linuxdeploy&gl=us
+  https://play.google.com/store/apps/details?id=tech.ula&gl=US&pli=1
 
 - Install Pebble SDK
 
