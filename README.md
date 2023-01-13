@@ -7,6 +7,7 @@ Easiest method:
 - Install debian distro on Linux Deploy or UserLand:
 
   https://play.google.com/store/apps/details?id=ru.meefik.linuxdeploy&gl=us
+
   https://play.google.com/store/apps/details?id=tech.ula&gl=US&pli=1
 
 - Install Pebble SDK
